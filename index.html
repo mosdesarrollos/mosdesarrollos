@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MOS Desarrollos</title>
+<meta name="description" content="MOS Desarrollos. Casas propias en el departamento Central, Paraguay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#070A0E;          /* negro */
+  --navy:#111822;         /* superficie */
+  --ice:#F1F2EF;          /* blanco hielo */
+  --dim:#8C97A3;
+  --blue:#3E7BC4;         /* azul acero */
+  --blue-deep:#1B4A85;
+  --line:rgba(241,242,239,.12);
+  --pad:clamp(20px,5vw,72px);
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0; background:var(--ink); color:var(--ice);
+  font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:17px; line-height:1.55; -webkit-font-smoothing:antialiased;
+  min-height:100svh; display:flex; flex-direction:column;
+  overflow-x:hidden;
+}
+a { color:inherit; text-decoration:none; }
+:focus-visible { outline:2px solid var(--blue); outline-offset:3px; }
+
+/* ---------- barra superior ---------- */
+header {
+  position:relative; z-index:5;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:18px var(--pad);
+}
+.brand { display:flex; align-items:center; gap:11px; }
+.brand b { font-weight:800; font-stretch:112%; letter-spacing:.16em; font-size:15px; }
+.top-links { display:flex; align-items:center; gap:clamp(14px,2.4vw,26px); font-size:13.5px; }
+.top-links a { color:var(--dim); }
+.top-links a:hover { color:var(--ice); }
+.pill {
+  background:var(--blue); color:#fff; font-weight:600; font-size:13.5px;
+  padding:9px 18px; border-radius:100px;
+}
+.pill:hover { background:#4A8AD6; color:#fff; }
+
+/* ---------- hero ---------- */
+.hero {
+  position:relative; flex:1; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; text-align:center;
+  padding:clamp(48px,9vw,96px) var(--pad) clamp(96px,15vw,170px);
+  overflow:hidden;
+}
+/* logo gigante de fondo */
+.bg-mark {
+  position:absolute; left:50%; top:46%; transform:translate(-50%,-50%);
+  height:min(58vh,470px); width:auto; opacity:.11; pointer-events:none; z-index:2;
+  filter:blur(.7px);
+  -webkit-mask-image:radial-gradient(ellipse 62% 58% at 50% 50%, #000 12%, rgba(0,0,0,.45) 52%, transparent 78%);
+  mask-image:radial-gradient(ellipse 62% 58% at 50% 50%, #000 12%, rgba(0,0,0,.45) 52%, transparent 78%);
+}
+/* arco de luz azul */
+.glow {
+  position:absolute; left:50%; bottom:-192vw; transform:translateX(-50%);
+  width:200vw; height:200vw; border-radius:50%; z-index:1; pointer-events:none;
+  background:
+    radial-gradient(closest-side at 50% 50%,
+      rgba(104,167,235,.50) 0%, rgba(44,104,176,.34) 12%, rgba(16,36,62,.92) 30%, #070A0E 46%);
+  box-shadow:0 -4px 170px 44px rgba(62,123,196,.26);
+  border-top:1.5px solid rgba(150,200,255,.55);
+}
+.hero-in { position:relative; z-index:3; width:100%; }
+.hero { min-height:clamp(430px,62svh,660px); }
+.wordmark {
+  display:inline-flex; align-items:center; justify-content:center; gap:13px;
+  margin:0 0 clamp(22px,4vw,34px);
+}
+.wordmark svg { display:block; }
+.wordmark b {
+  font-weight:800; font-stretch:112%; font-size:clamp(12.5px,2.6vw,16px);
+  letter-spacing:.24em; text-indent:.24em; color:var(--ice);
+}
+h1 {
+  font-size:clamp(36px,7.6vw,76px); line-height:1.0; margin:0 auto 18px;
+  font-weight:800; font-stretch:86%; letter-spacing:-.025em; max-width:14ch;
+}
+.sub { color:#C2C9D1; max-width:46ch; margin:0 auto clamp(28px,5vw,40px); }
+.btns { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+.btn {
+  display:inline-flex; align-items:center; gap:9px; border-radius:100px;
+  padding:14px 26px; font-weight:600; font-size:15.5px;
+  background:var(--blue); color:#fff; border:1px solid transparent;
+}
+.btn:hover { background:#4A8AD6; }
+.btn.ghost { background:rgba(241,242,239,.04); border-color:var(--line); color:var(--ice); }
+.btn.ghost:hover { background:rgba(241,242,239,.09); }
+
+/* ---------- tarjetas de proyecto ---------- */
+.projects { position:relative; z-index:3; padding:0 var(--pad) clamp(34px,5vw,48px); margin-top:clamp(-18px,-2vw,0px); }
+.social {
+  position:relative; z-index:3; display:flex; flex-wrap:wrap; gap:12px;
+  justify-content:center; padding:0 var(--pad) clamp(54px,8vw,86px);
+}
+.sec-head {
+  font-size:11.5px; color:var(--dim); letter-spacing:.14em; text-transform:uppercase;
+  text-align:center; margin:0 0 18px;
+}
+.cards {
+  display:flex; flex-wrap:wrap; gap:14px; justify-content:center;
+}
+.card {
+  position:relative; overflow:hidden; border-radius:4px;
+  border:1px solid var(--line); background:rgba(17,24,34,.72);
+  backdrop-filter:blur(10px);
+  width:clamp(210px,42vw,240px); padding:20px 22px 18px;
+  transition:border-color .2s, transform .2s, background .2s;
+}
+a.card:hover { border-color:rgba(120,175,240,.55); background:rgba(23,34,48,.86); transform:translateY(-2px); }
+.card b { display:block; font-size:19px; font-weight:700; font-stretch:94%; letter-spacing:-.01em; }
+.card span { display:block; color:var(--dim); font-size:13px; margin-top:4px; }
+.card .go { display:block; margin-top:14px; font-size:13px; font-weight:600; color:var(--blue); }
+.card.soon { border-style:dashed; background:rgba(17,24,34,.4); }
+.card.soon b, .card.soon span { opacity:.55; }
+.ribbon {
+  position:absolute; top:22px; right:-32px; transform:rotate(45deg);
+  width:150px; text-align:center; padding:4px 0; line-height:1.5;
+  background:var(--blue-deep); color:#EAF2FB;
+  font-size:8.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+  box-shadow:0 2px 10px rgba(0,0,0,.35);
+}
+
+footer {
+  position:relative; z-index:3;
+  padding:20px var(--pad) 34px; color:var(--dim); font-size:12.5px;
+  border-top:1px solid var(--line);
+  display:flex; flex-wrap:wrap; gap:8px 22px; justify-content:space-between;
+}
+footer a:hover { color:var(--ice); }
+@media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html" aria-label="MOS Desarrollos">
+    <svg width="14" height="36" viewBox="0 0 13 34" aria-hidden="true">
+      <g fill="#F1F2EF">
+        <rect y="0" width="13" height="4.4"/><rect y="5.9" width="13" height="4.4"/>
+        <rect y="11.8" width="13" height="4.4"/><rect y="17.7" width="13" height="4.4"/>
+        <rect y="23.6" width="13" height="4.4"/><rect y="29.5" width="13" height="4.4"/>
+      </g>
+    </svg>
+    <b>MOS</b>
+  </a>
+  <div class="top-links">
+    <a href="#proyectos">Proyectos</a>
+    <a href="proyecto-1.html">Proyecto 1</a>
+    <a class="pill" href="https://wa.me/595985137123" target="_blank" rel="noopener">Contactar</a>
+  </div>
+</header>
+
+<div class="hero">
+  <svg class="bg-mark" viewBox="0 0 13 34" aria-hidden="true">
+    <g fill="#F1F2EF">
+      <rect y="0" width="13" height="4.4"/><rect y="5.9" width="13" height="4.4"/>
+      <rect y="11.8" width="13" height="4.4"/><rect y="17.7" width="13" height="4.4"/>
+      <rect y="23.6" width="13" height="4.4"/><rect y="29.5" width="13" height="4.4"/>
+    </g>
+  </svg>
+  <div class="glow"></div>
+
+  <div class="hero-in">
+    <div class="wordmark">
+      <svg width="17" height="44" viewBox="0 0 13 34" aria-hidden="true">
+        <g fill="#F1F2EF">
+          <rect y="0" width="13" height="4.4"/><rect y="5.9" width="13" height="4.4"/>
+          <rect y="11.8" width="13" height="4.4"/><rect y="17.7" width="13" height="4.4"/>
+          <rect y="23.6" width="13" height="4.4"/><rect y="29.5" width="13" height="4.4"/>
+        </g>
+      </svg>
+      <b>MOS DESARROLLOS</b>
+    </div>
+    <h1>Casas propias, de la obra a la entrega</h1>
+    <p class="sub">Desarrollamos y vendemos nuestras propias casas en el departamento Central. Ac&aacute; pod&eacute;s visualizar los proyectos, con su ficha, su plano y el avance de obra.</p>
+  </div>
+</div>
+
+<div class="projects" id="proyectos">
+  <p class="sec-head">Proyectos</p>
+  <div class="cards">
+    <a class="card" href="proyecto-1.html">
+      <b>Proyecto 1</b>
+      <span>&#209;emby &#183; 3 dorm. &#183; 366 m&#178;</span>
+      <span class="go">Ver el proyecto &#8594;</span>
+    </a>
+    <div class="card soon">
+      <div class="ribbon">Pr&#243;ximamente</div>
+      <b>Proyecto 2</b>
+      <span>En preparaci&#243;n</span>
+      <span class="go" style="color:var(--dim)">&#160;</span>
+    </div>
+  </div>
+</div>
+
+<div class="social">
+  <a class="btn" href="https://wa.me/595985137123" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  <a class="btn ghost" href="https://instagram.com/mosdesarrollos" target="_blank" rel="noopener">Ver Instagram</a>
+</div>
+
+<footer>
+  <span>MOS Desarrollos &#183; Central, Paraguay</span>
+  <span>
+    <a href="https://wa.me/595985137123" target="_blank" rel="noopener">WhatsApp</a> &#183;
+    <a href="https://instagram.com/mosdesarrollos" target="_blank" rel="noopener">Instagram</a>
+  </span>
+</footer>
+
+</body>
+</html>
