@@ -225,11 +225,11 @@ button.cta { border:0; cursor:pointer; font-family:inherit; }
   </a>
   <nav>
     <a href="index.html">Proyectos</a>
-    <a href="#obra" class="hide-s">La obra</a>
-    <a href="#interior">Interior</a>
-    <a href="#tres-d" class="hide-s">3D</a>
     <a href="#final">Así va a quedar</a>
     <a href="#ficha">Ficha</a>
+    <a href="#tres-d" class="hide-s">3D</a>
+    <a href="#interior">Interior</a>
+    <a href="#obra" class="hide-s">La obra</a>
     <a href="#galeria" class="hide-s">Galería</a>
     <a href="#contacto">Contacto</a>
   </nav>
@@ -250,53 +250,6 @@ button.cta { border:0; cursor:pointer; font-family:inherit; }
       </div>
     </div>
   </div>
-
-  <section id="obra">
-    <p class="sec-head">Marzo 2026 a la actualidad</p>
-    <h2>Del revoque a la fachada terminada</h2>
-    <p class="lead">Arrastrá para comparar la misma esquina antes y después.<br>Podrás ver el estado anterior y el estado actual de la construcción.</p>
-    <div class="ba" role="slider" tabindex="0" aria-label="Comparar antes y después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-      <img data-k="obra_antes" alt="Estado anterior: revoque sin terminar">
-      <img class="after" data-k="obra_despues" alt="Estado actual: fachada terminada y galería">
-      <div class="ba-handle"></div>
-      <div class="ba-tag l">Antes</div>
-      <div class="ba-tag r">Después</div>
-    </div>
-  </section>
-
-  <hr class="rule">
-
-  <section id="interior">
-    <p class="sec-head">Por dentro</p>
-    <h2>Ambiente por ambiente</h2>
-    <p class="lead">Así está hoy. Piso cer&#225;mico colocado en toda la casa, techo colocado y ba&#241;o revestido hasta el techo. Faltan las aberturas, la grifer&#237;a, el enduido y la pintura.</p>
-    <div class="grid">
-      <button class="tile" data-i="13" aria-label="Ampliar: Frente y galería de acceso"><img data-k="frente_hoy" alt="Frente y galería de acceso" loading="lazy"></button>
-      <button class="tile" data-i="14" aria-label="Ampliar: Estar, con dos ventanas al frente"><img data-k="estar_hoy" alt="Estar, con dos ventanas al frente" loading="lazy"></button>
-      <button class="tile" data-i="15" aria-label="Ampliar: Cocina-comedor, con salida al patio"><img data-k="cocina_hoy" alt="Cocina-comedor, con salida al patio" loading="lazy"></button>
-      <button class="tile" data-i="16" aria-label="Ampliar: Dormitorio principal"><img data-k="dormppal_hoy" alt="Dormitorio principal" loading="lazy"></button>
-      <button class="tile" data-i="17" aria-label="Ampliar: Dormitorio 1"><img data-k="dorm1_hoy" alt="Dormitorio 1" loading="lazy"></button>
-      <button class="tile" data-i="18" aria-label="Ampliar: Dormitorio 2"><img data-k="dorm2_hoy" alt="Dormitorio 2" loading="lazy"></button>
-      <button class="tile" data-i="19" aria-label="Ampliar: Baño completo, revestido hasta el techo"><img data-k="bano_hoy" alt="Baño completo, revestido hasta el techo" loading="lazy"></button>
-      <button class="tile" data-i="20" aria-label="Ampliar: Lavadero con pileta de material"><img data-k="lavadero_hoy" alt="Lavadero con pileta de material" loading="lazy"></button>
-    </div>
-  </section>
-
-  <hr class="rule">
-
-  <section id="tres-d">
-    <div class="tri">
-      <img data-k="frente_fin" alt="Frente terminado de la casa" loading="lazy">
-      <div class="tri-in">
-        <p class="sec-head">Modelo 3D</p>
-        <h2>Recorrela en 3D</h2>
-        <p>Girala, acercate y sacale el techo para ver cada ambiente. Armada con las medidas reales del plano.</p>
-        <button class="cta" id="open3d" type="button">Abrir el modelo 3D</button>
-      </div>
-    </div>
-  </section>
-
-  <hr class="rule">
 
   <section id="final">
     <p class="sec-head">Así va a quedar</p>
@@ -375,6 +328,23 @@ button.cta { border:0; cursor:pointer; font-family:inherit; }
       </dl>
     </div>
     <p class="patio-note">La casa ocupa 68 m&#178; de los 366: quedan casi 300 m&#178; de patio libre, al fondo y a los costados. Espacio de sobra para piscina, quincho, cochera cubierta o una ampliaci&#243;n m&#225;s adelante.</p>
+    <div class="btns" style="margin-top:24px">
+      <a class="cta" href="https://wa.me/595985137123" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="tres-d">
+    <div class="tri">
+      <img data-k="frente_fin" alt="Frente terminado de la casa" loading="lazy">
+      <div class="tri-in">
+        <p class="sec-head">Modelo 3D</p>
+        <h2>Recorrela en 3D</h2>
+        <p>Girala, acercate y sacale el techo para ver cada ambiente. Armada con las medidas reales del plano.</p>
+        <button class="cta" id="open3d" type="button">Abrir el modelo 3D</button>
+      </div>
+    </div>
   </section>
 
   <hr class="rule">
@@ -410,6 +380,39 @@ button.cta { border:0; cursor:pointer; font-family:inherit; }
 
   <hr class="rule">
 
+  <section id="interior">
+    <p class="sec-head">Por dentro</p>
+    <h2>Ambiente por ambiente</h2>
+    <p class="lead">Así está hoy. Piso cer&#225;mico colocado en toda la casa, techo colocado y ba&#241;o revestido hasta el techo. Faltan las aberturas, la grifer&#237;a, el enduido y la pintura.</p>
+    <div class="grid">
+      <button class="tile" data-i="13" aria-label="Ampliar: Frente y galería de acceso"><img data-k="frente_hoy" alt="Frente y galería de acceso" loading="lazy"></button>
+      <button class="tile" data-i="14" aria-label="Ampliar: Estar, con dos ventanas al frente"><img data-k="estar_hoy" alt="Estar, con dos ventanas al frente" loading="lazy"></button>
+      <button class="tile" data-i="15" aria-label="Ampliar: Cocina-comedor, con salida al patio"><img data-k="cocina_hoy" alt="Cocina-comedor, con salida al patio" loading="lazy"></button>
+      <button class="tile" data-i="16" aria-label="Ampliar: Dormitorio principal"><img data-k="dormppal_hoy" alt="Dormitorio principal" loading="lazy"></button>
+      <button class="tile" data-i="17" aria-label="Ampliar: Dormitorio 1"><img data-k="dorm1_hoy" alt="Dormitorio 1" loading="lazy"></button>
+      <button class="tile" data-i="18" aria-label="Ampliar: Dormitorio 2"><img data-k="dorm2_hoy" alt="Dormitorio 2" loading="lazy"></button>
+      <button class="tile" data-i="19" aria-label="Ampliar: Baño completo, revestido hasta el techo"><img data-k="bano_hoy" alt="Baño completo, revestido hasta el techo" loading="lazy"></button>
+      <button class="tile" data-i="20" aria-label="Ampliar: Lavadero con pileta de material"><img data-k="lavadero_hoy" alt="Lavadero con pileta de material" loading="lazy"></button>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="obra">
+    <p class="sec-head">Marzo 2026 a la actualidad</p>
+    <h2>Del revoque a la fachada terminada</h2>
+    <p class="lead">Arrastrá para comparar la misma esquina antes y después.<br>Podrás ver el estado anterior y el estado actual de la construcción.</p>
+    <div class="ba" role="slider" tabindex="0" aria-label="Comparar antes y después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+      <img data-k="obra_antes" alt="Estado anterior: revoque sin terminar">
+      <img class="after" data-k="obra_despues" alt="Estado actual: fachada terminada y galería">
+      <div class="ba-handle"></div>
+      <div class="ba-tag l">Antes</div>
+      <div class="ba-tag r">Después</div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
   <section id="galeria">
     <p class="sec-head">Galería</p>
     <h2>Cronología de la obra, en orden inverso</h2>
@@ -435,10 +438,12 @@ button.cta { border:0; cursor:pointer; font-family:inherit; }
   <section id="contacto" class="contacto">
     <p class="sec-head">Contacto</p>
     <h2>¿Querés visitarla?</h2>
-    <p class="lead">Se pueden coordinar visitas a la obra. Trabajamos con vendedores que además gestionan créditos bancarios.</p>
+    <p class="lead">Se pueden coordinar visitas a la obra. Trabajamos con vendedores que además gestionan créditos bancarios. Y seguí el avance de la obra en Instagram, TikTok y Facebook.</p>
     <div class="btns">
       <a class="cta" href="https://wa.me/595985137123" target="_blank" rel="noopener">Escribir por WhatsApp</a>
       <a class="cta ghost" href="https://instagram.com/mosdesarrollos" target="_blank" rel="noopener">Instagram</a>
+      <a class="cta ghost" href="https://www.tiktok.com/@mosdesarrollos" target="_blank" rel="noopener">TikTok</a>
+      <a class="cta ghost" href="https://www.facebook.com/profile.php?id=61595207519336" target="_blank" rel="noopener">Facebook</a>
     </div>
   </section>
 
